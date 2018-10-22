@@ -110,12 +110,8 @@ export default StyleSheet.create({
 #### Example
 
 ```js
-import { StyleSheet } from "react-native";
-import RNRP from "react-native-responsive-percent";
+import modelHelper from "react-native-iphone-model-helper";
 
-export default StyleSheet.create({
-  title: {
-    fontSize: RNRP.f(15)
-  }
-});
+console.log(modelHelper.getDeviceModel());
+// >> 'iPhone XR'
 ```

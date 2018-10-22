@@ -1,6 +1,25 @@
 # react-native-iphone-model-helper
 
 Helps you to identify the device model and the screen ratio.
+It uses 'react-native-device-info' as peer dependency.
+
+## Installation
+
+Using npm:
+
+```shell
+npm install --save react-native-iphone-model-helper
+npm install --save react-native-device-info
+react-native link react-native-device-info
+```
+
+or using yarn:
+
+```shell
+yarn add react-native-iphone-model-helper
+yarn add react-native-device-info
+react-native link react-native-device-info
+```
 
 ### Elements
 
@@ -40,7 +59,9 @@ console.log(isIphoneXsMax());
 // >> false
 ```
 
-- wr: Returns a number calculated with the ratio of the device width. You can import this with 'widthByRatio'.
+- screenHeight: Returns the screen height of the device. (Number type)
+- screenWidth: Returns the screen width of the device. (Number type)
+- screenRatio: Returns the screen height of the device. (Number type)
 
 ```js
 import { StyleSheet } from "react-native";

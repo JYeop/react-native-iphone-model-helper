@@ -9,6 +9,7 @@ Using npm:
 
 ```shell
 npm install --save react-native-iphone-model-helper
+# If you did not install the 'react-native-device-info', run the commands below.
 npm install --save react-native-device-info
 react-native link react-native-device-info
 ```
@@ -17,13 +18,14 @@ or using yarn:
 
 ```shell
 yarn add react-native-iphone-model-helper
+# If you did not install the 'react-native-device-info', run the commands below.
 yarn add react-native-device-info
 react-native link react-native-device-info
 ```
 
 ### Elements
 
-- getDeviceModel: Returns a string of the device model name.
+- getDeviceModel: Returns a string of the device model name. (Function)
 
 ```js
 import { getDeviceModel } from "react-native-iphone-model-helper";
@@ -32,7 +34,7 @@ console.log(getDeviceModel());
 // >> 'iPhone XS Max'
 ```
 
-- isIphone{model}: Returns a boolean.
+- isIphone{model}: Returns a boolean. (Function)
   - Supporting models: "XS, XS Max, XR, X, 8, 8 Plus, 7, 7 Plus, SE, 6, 6 Plus, 5s, 5c
   - Function names:
     isIphoneX,
@@ -59,52 +61,24 @@ console.log(isIphoneXsMax());
 // >> false
 ```
 
-- screenHeight: Returns the screen height of the device. (Number type)
-- screenWidth: Returns the screen width of the device. (Number type)
-- screenRatio: Returns the screen height of the device. (Number type)
+- screenHeight: Returns a number the screen height of the device. (Static)
+- screenWidth: Returns a number the screen width of the device. (Static)
+- screenRatio: Returns a number the screen height of the device. (Static)
 
 ```js
-import { StyleSheet } from "react-native";
-import { wr, widthByRatio } from "react-native-responsive-percent";
+import {
+  screenHeight,
+  screenWidth,
+  screenRatio
+} from "react-native-responsive-percent";
 
-export default StyleSheet.create({
-  image: {
-    width: wr(0.15) // On iphoneX : 56, iphoneXS Max: 62
-    // width: wr('0.15')   // Same above
-    // width: widthByRatio(15)   // Same above
-  }
-});
-```
+console.log(screenHeight);
+console.log(screenWidth);
+console.log(screenRatio);
 
-- hp: Returns a number calculated with the ratio of the device height. You can import this with 'heightByPercent'.
-
-```js
-import { StyleSheet } from "react-native";
-import { hp, heightByPercent } from "react-native-responsive-percent";
-
-export default StyleSheet.create({
-  image: {
-    height: hp(15) // On iphoneX : 121, iphoneXS Max: 134
-    // height: hp('15%')   // Same above
-    // height: hp('15')   // Same above
-    // width: heightByPercent(15)   // Same above
-  }
-});
-```
-
-- hr: Returns a number calculated with the ratio of the device height. You can import this with 'heightByRatio'.
-
-```js
-import { StyleSheet } from "react-native";
-import { hr, heightByRatio } from "react-native-responsive-percent";
-
-export default StyleSheet.create({
-  image: {
-    height: hr(0.15) // On iphoneX : 121, iphoneXS Max: 134
-    // height: hr('0.15')   // Same above
-    // width: heightByRatio(15)   // Same above
-  }
-});
+// >> 896
+// >> 414
+// >> 2.16
 ```
 
 #### Example

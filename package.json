@@ -1,6 +1,6 @@
 {
   "name": "react-native-iphone-model-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Helps to identify the model name of the device.",
   "main": "index.js",
   "scripts": {

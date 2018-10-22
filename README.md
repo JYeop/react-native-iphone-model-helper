@@ -61,9 +61,9 @@ console.log(isIphoneXsMax());
 // >> false
 ```
 
-- screenHeight: Returns a number the screen height of the device. (Static)
-- screenWidth: Returns a number the screen width of the device. (Static)
-- screenRatio: Returns a number the screen height of the device. (Static)
+- screenHeight: Returns a number of the the screen height of the device. (Static)
+- screenWidth: Returns a number of the the screen width of the device. (Static)
+- screenRatio: Returns a number of the the screen height of the device. (Static)
 
 ```js
 import {
